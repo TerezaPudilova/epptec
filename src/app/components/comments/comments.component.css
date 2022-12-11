@@ -1,7 +1,4 @@
 .comments {
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
     max-width: 35em;
     display: flex;
     flex-wrap: wrap;
@@ -9,15 +6,6 @@
     justify-content: center;
     border-style: solid;
   }
-  /* .comments li {
-    position: relative;
-    border-style: solid;
-    margin: 10px;
-    padding: 10px;
-    max-height: 180px;
-    background-color: white;
-    border-width: 3px;
-  } */
 
   .comment {
     position: relative;

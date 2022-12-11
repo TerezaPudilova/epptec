@@ -12,19 +12,6 @@
     border-width: 2px;
   }
 
-  /* .posts-wrapper {
-    list-style-type: none;
-    padding: 0;
-    max-width: 35em;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    background-color: aliceblue;
-    border-style: solid;
-    border-width: 2px;
-  } */
-
   .post {
     position: relative;
     border-style: solid;
@@ -38,43 +25,10 @@
     flex-direction: column;
     justify-content: center;
   }
-  
-  /* .posts li {
-    position: relative;
-    border-style: solid;
-    margin: 10px;
-    padding: 10px;
-    max-height: 200px;
-    background-color: white;
-    border-width: 3px;
-  } */
-  
+
   .post:hover {
     left: .1em;
   }
-
-  /* .button {
-    max-width: 80px;
-    text-align: center;
-    margin-left: 0;
-    background-color: #EEE;
-    text-decoration: none;
-    height: 25px;
-    padding: 3px;
-    margin: 3px;
-    border-style: solid;
-    border-width: 2px
-  } */
-
-  /* .title {
-    font-size: larger;
-    margin: 0;
-    font-weight: 600;
-  }
-
-  h2 {
-    margin-bottom: 0px;
-  } */
 
 .post-bottom {
     display: flex;
