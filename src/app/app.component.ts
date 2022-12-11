@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthorService } from './service/author.service';
 import { CommentService } from './service/comment.service';
 import { PostService } from './service/post.service';
 
@@ -12,11 +13,13 @@ export class AppComponent  implements OnInit {
 
   constructor(
     private postService: PostService,
-    private commentsService: CommentService
+    private commentsService: CommentService,
+    private authorService: AuthorService
   ) {}
 
   ngOnInit() {
     this.postService.getPosts()
     this.commentsService.getComments()
+    this.authorService.getAuthors()
   }
 }

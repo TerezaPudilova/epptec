@@ -22,4 +22,5 @@ export class PostService {
   getPost(id: number) {
     return this.posts$.pipe(map((posts) => posts.find((f) => f.id === id)));
   }
+
 }

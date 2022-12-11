@@ -3,7 +3,6 @@ import { Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 import { map } from "rxjs/operators";
 import {Comment} from '../model/comment'
-
 @Injectable({providedIn: 'root'})
 export class CommentService {
 private readonly commentsSubject = new BehaviorSubject<Comment[]>([]);
@@ -19,11 +18,11 @@ getComments() {
     })
 }
 
-getCommentForPost(postId: number) {
+getCommentsForPost(postId: number) {
     return this.comments$.pipe(map((comments) => comments.filter((comment) => comment.postId === postId)))
 }
 
 getCommentForPostCount(postId: number) {
-    return this.getCommentForPost(postId).pipe(map((comments) => comments.length))
+    return this.getCommentsForPost(postId).pipe(map((comments) => comments.length))
 }
 }

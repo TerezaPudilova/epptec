@@ -1,1 +1,32 @@
-<p>post-list works!</p>
+<h1 class="text-3xl lg:text-2xl font-bold">All posts</h1>
+<table>
+    <div class="posts-wrapper">
+        <div class="post">
+            <tbody>
+                <tr *ngFor="let post of posts$ | async">
+                  <td class="bg-gray-700">{{ post.title }}</td>
+                  <td><app-author [userId]="post.userId"></app-author></td>
+                  <td>{{ post.body}}</td>
+                  <td><app-comments-count [commentId]="post.id"></app-comments-count></td>
+                  <td>
+                    <a class="w-20 items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-gray-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900" [routerLink]="[post.id]">Show more</a>
+                  </td>
+                </tr>
+              </tbody>
+        </div>
+    </div>
+  </table>
+
+  <!-- <ul class="posts">
+    <li *ngFor="let post of posts$ | async">
+        <div>
+            <p class="bg-red-500">{{post.title}}</p>
+            <app-author [userId]="post.userId"></app-author>
+            <p>{{post.body  | slice}}</p>
+            <div class="post-bottom">
+                <a class="button" [routerLink]="[post.id]">Show more</a>
+                <app-comments-count [commentId]="post.id"></app-comments-count>
+            </div>
+        </div>
+    </li>
+  </ul> -->

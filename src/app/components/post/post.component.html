@@ -1,0 +1,12 @@
+<h1 class="text-3xl lg:text-2xl font-bold">Post detail</h1>
+<ng-container *ngIf="post$ | async as post">
+  <div class="post-wrapper">
+    <a class="w-20 items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-gray-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900" [routerLink]="['..']">Back</a>
+    <div class="post-detail">
+      <h2 class="text-lg lg:text-2xl font-bold">{{ post?.title }}</h2>
+      <app-author [userId]="post.userId"></app-author>
+      <p>{{ post?.body }}</p>
+    </div>
+    <app-comments [postId]="post.id"></app-comments>
+  </div>
+</ng-container>
