@@ -1,23 +1,29 @@
 <h1 class="text-3xl lg:text-2xl font-bold">All posts</h1>
 <table>
-    <div class="posts-wrapper">
-        <div class="post">
-            <tbody>
-                <tr *ngFor="let post of posts$ | async">
-                  <td class="bg-gray-700">{{ post.title }}</td>
-                  <td><app-author [userId]="post.userId"></app-author></td>
-                  <td>{{ post.body}}</td>
-                  <td><app-comments-count [commentId]="post.id"></app-comments-count></td>
-                  <td>
-                    <a class="w-20 items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-gray-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900" [routerLink]="[post.id]">Show more</a>
-                  </td>
-                </tr>
-              </tbody>
-        </div>
-    </div>
-  </table>
+    <tbody>
+      <div class="posts">
+        <tr class="post" *ngFor="let post of posts$ | async">
+          <td class="font-semibold text-lg">{{ post.title }}</td>
+          <td><app-author [userId]="post.userId"></app-author></td>
+          <td>{{ post.body | slice }}</td>
+          <div class="post-bottom">
+            <td>
+              <a
+                class="w-20 items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-gray-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900"
+                [routerLink]="[post.id]"
+                >Show more</a
+              >
+            </td>
+            <td>
+              <app-comments-count [commentId]="post.id"></app-comments-count>
+            </td>
+          </div>
+        </tr>
+      </div>
+    </tbody>
+</table>
 
-  <!-- <ul class="posts">
+<!-- <ul class="posts">
     <li *ngFor="let post of posts$ | async">
         <div>
             <p class="bg-red-500">{{post.title}}</p>

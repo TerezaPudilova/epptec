@@ -1,6 +1,6 @@
 .posts {
-    /* margin: 0 0 2em 0; */
     list-style-type: none;
+    margin: 12px;
     padding: 0;
     max-width: 35em;
     display: flex;
@@ -12,8 +12,7 @@
     border-width: 2px;
   }
 
-  .posts-wrapper {
-    /* margin: 0 0 2em 0; */
+  /* .posts-wrapper {
     list-style-type: none;
     padding: 0;
     max-width: 35em;
@@ -24,19 +23,23 @@
     background-color: aliceblue;
     border-style: solid;
     border-width: 2px;
-  }
+  } */
 
   .post {
     position: relative;
     border-style: solid;
     margin: 10px;
     padding: 10px;
-    max-height: 200px;
+    max-height: 280px;
     background-color: white;
     border-width: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
   }
   
-  .posts li {
+  /* .posts li {
     position: relative;
     border-style: solid;
     margin: 10px;
@@ -44,13 +47,13 @@
     max-height: 200px;
     background-color: white;
     border-width: 3px;
-  }
+  } */
   
-  .posts li:hover {
+  .post:hover {
     left: .1em;
   }
 
-  .button {
+  /* .button {
     max-width: 80px;
     text-align: center;
     margin-left: 0;
@@ -61,9 +64,9 @@
     margin: 3px;
     border-style: solid;
     border-width: 2px
-  }
+  } */
 
-  .title {
+  /* .title {
     font-size: larger;
     margin: 0;
     font-weight: 600;
@@ -71,10 +74,11 @@
 
   h2 {
     margin-bottom: 0px;
-  }
+  } */
 
 .post-bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 8px
 }

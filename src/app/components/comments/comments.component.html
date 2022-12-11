@@ -1,19 +1,21 @@
 <table>
-    <tbody>
-        <tr *ngFor="let comment of comments$ | async">
-            <td>{{comment.name}}</td>
-            <td>{{comment.email}}</td>
-            <td>{{comment.body}}</td>
-        </tr>
-    </tbody>
+  <tbody>
+    <div class="comments">
+      <tr class="comment" *ngFor="let comment of comments$ | async">
+        <td class="font-semibold">{{ comment.name }}</td>
+        <td class="underline">{{ comment.email }}</td>
+        <td>{{ comment.body }}</td>
+      </tr>
+    </div>
+  </tbody>
 </table>
 
-<ul class="comments">
-    <li *ngFor="let comment of comments$ | async">
-        <h3>
-            {{comment.name}}
-        </h3>
-        <p>{{comment.email}}</p>
-        <p>{{comment.body}}</p>
-    </li>
-</ul>
+<!-- <ul class="comments">
+  <li *ngFor="let comment of comments$ | async">
+    <h3>
+      {{ comment.name }}
+    </h3>
+    <p>{{ comment.email }}</p>
+    <p>{{ comment.body }}</p>
+  </li>
+</ul> -->
